@@ -71,8 +71,13 @@ class Game{
                      stroke("black");
                      textSize(25);
                      text(allPlayers[plr].name + "'s Score : " + allPlayers[plr].score, 50, display_position);
-                   }
-                   
+
+                 
+                 }
+                
+                
+                 
+
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
                     player.distance -= 10
                     player.update();
@@ -102,17 +107,27 @@ class Game{
                      
                  }
                  
-                if (player.index !== null) {
-                for (var i = 0; i < fruitGroup.length; i++){
-                if (fruitGroup.get(i).isTouching(players)){
-                fruitGroup.get(i).destroy();
-                player.score +=1;
-                player.update();
-            }
-       } 
+                  if (player.index !== null) {
+                    for (var i = 0; i < fruitGroup.length; i++){
+                        if (fruitGroup.get(i).isTouching(players)){
+                            fruitGroup.get(i).destroy();
+                            player.score +=1;
+                            player.update();
+                        }
+                    } 
                     
-     }
- }
+                  }
+                  
+
+
+                  
+
+         
+         
+        
+         
+
+    }
 
     end(){
        console.log("Game Ended");
